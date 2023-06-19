@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block myscripts %}
+<link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.7/d3.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="important">
+      <h1>
+        Shopping Behavior Analysis
+      </h1>
+</div>
+      
+<div>
+  <h3>
+  Product Buying Trends
+  </h3>
+</div>
+<div class="row">
+    <img style="border:1px solid black;" src="/static/images/top10.png" alt="Product ML" width="1000" height="400"/>
+</div>
+
+<div>
+  <h3>
+  Sales Trends
+  </h3>
+</div>
+<div class="row">
+    <img style="border:1px solid black;" src="/static/images/highsales.png" alt="Product ML" width="1000" height="400"/>
+</div>
+
+
+
+
+
+
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<br>
+
+
+<div class="important">
+<div style="text-align: center;">
+    <h1><b>Jio Project</b></h1>
+    <p class="important">Behaviorial analysis of Retail Sales</p>
+    </div>
+</div>
+
+<br>
+<body>
+<img src="/static/images/OIP.jpeg" alt="JIO" height="250" width="350">
+<img src="/static/images/retail.jpeg" alt="JIO" height="250" width="350">
+<img src="/static/images/apriori.jpeg" alt="JIO" height="250" width="400">
+</div>
+
+</body>
+<br>
+<br>
+<div class="container">
+
+
+<div class="row">
+    <div >
+        <form method="post" action="/run" enctype="multipart/form-data">
+
+        <div class="form-group">
+          <label for="file">Choose File:</label>
+          <input type="file" class="form-control-file" id="file" name="file">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+      </form>
+    </div>
+    <br>
+
+    <div style="text-align:center;">
+        <h4>Tech Stack:</h4>
+        <p>Machine Learning-Google Colab,Apriori,Python</p>
+        <p>Web - HTML, CSS, Flask, Javascript</p>
+        </p>
+        <p><a class="btn btn-default" href="https://en.wikipedia.org/wiki/Association_rule_learning">Learn more &raquo;</a></p>
+    </div>
+
+</div>
+</div>
+{% endblock %}
