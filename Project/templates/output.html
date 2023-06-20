@@ -6,21 +6,30 @@
     <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
     <script src="/static/scripts/modernizr-2.6.2.js"></script>
+    <style>
+      table {
+           border-collapse: collapse;
+           width: 100%;
+            }
+
+      th, td {
+          padding: 8px;
+          text-align: left;
+          border-bottom: 1px solid #ddd;
+            }
+
+      th {
+         background-color: #f2f2f2;
+         }
+</style>
 </head>
 <body>
 
         <div class="container">
-            <h1>Table Data</h1>
+            <h2>Apriori Output</h2>
         <table>
-    <thead>
-      <tr>
-        <th>Rule</th>
-        <th>Support</th>
-        <th>Confidence</th>
-        <th>Lift</th>
-      </tr>
-    </thead>
-    <tbody>
+
+    <!--<tbody>
       {% for row in table_data %}
       <tr>
         <td>{{ row.rule }}</td>
@@ -29,8 +38,27 @@
         <td>{{ row.lift}}</td>
       </tr>
       {% endfor %}
-    </tbody>
-  </table>
+    </tbody>-->
+           <table>
+  <thead>
+    <tr>
+      <th>Rule</th>
+      <th>Support</th>
+      <th>Confidence</th>
+      <th>Lift</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in table_data %}
+    <tr>
+      <td>{{ row.rule }}</td>
+      <td>{{ row.support }}</td>
+      <td>{{ row.confidence }}</td>
+      <td>{{ row.lift }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
         </div>
 
 
