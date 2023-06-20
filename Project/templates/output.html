@@ -13,13 +13,13 @@
             }
 
       th, td {
-          padding: 8px;
+          padding: 12px;
           text-align: left;
           border-bottom: 1px solid #ddd;
             }
 
       th {
-         background-color: #f2f2f2;
+         background-color: #fffdd0;
          }
 </style>
 </head>
@@ -48,14 +48,16 @@
       <th>Lift</th>
     </tr>
   </thead>
-  <tbody>
+ <tbody>
     {% for row in table_data %}
+    {% if loop.index <= 10 %}
     <tr>
       <td>{{ row.rule }}</td>
       <td>{{ row.support }}</td>
       <td>{{ row.confidence }}</td>
       <td>{{ row.lift }}</td>
     </tr>
+    {% endif %}
     {% endfor %}
   </tbody>
 </table>
